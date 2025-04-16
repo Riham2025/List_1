@@ -52,7 +52,7 @@ namespace List_1
                     .ToList();
             }
 
-            //2. 
+            //2.  //  Palindrome
 
             static List<string> FilterPalindromes(List<string> input)
             {
