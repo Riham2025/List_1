@@ -28,6 +28,7 @@ namespace List_1
             {
                 return numbers
                     .GroupBy(num => num)                          // We collect the similar numbers
+                    .OrderByDescending(group => group.Count())    // We arrange them according to the number of repetitions.
                     
             }
         }
