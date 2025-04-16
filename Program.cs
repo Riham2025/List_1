@@ -30,7 +30,8 @@ namespace List_1
                     .GroupBy(num => num)                          // We collect the similar numbers
                     .OrderByDescending(group => group.Count())    // We arrange them according to the number of repetitions.
                     .Take(n)                                      // We take the first N numbers.
-                    
+                    .Select(group => group.Key)                   // Return the numbers only.
+                    .ToList();
             }
         }
 
