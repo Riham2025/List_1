@@ -20,9 +20,27 @@ namespace List_1
                 {
                     Console.WriteLine(num);
                 }
+
+                //2. Palindrome Filter
+
+                List<string> words = new List<string>
+
+                    { "madam", "hello", "level", "world", "racecar", "openai" };
+        
+
+                List<string> palindromes = FilterPalindromes(words);
+
+                Console.WriteLine("Palindrome words:");
+                foreach (string word in palindromes)
+                {
+                    Console.WriteLine(word);
+                }
+
+
+
             }
 
-
+            //1. 
 
             static List<int> GetTopNFrequentNumbers(List<int> numbers, int n)
             {
@@ -33,6 +51,25 @@ namespace List_1
                     .Select(group => group.Key)                   // Return the numbers only.
                     .ToList();
             }
+
+            //2. 
+
+            static List<string> FilterPalindromes(List<string> input)
+            {
+                return input
+                    .Where(word => IsPalindrome(word))
+                    .ToList();
+            }
+
+            //  Palindrome
+            static bool IsPalindrome(string word)
+            {
+                string reversed = new string(word.Reverse().ToArray());
+                return word.Equals(reversed, StringComparison.OrdinalIgnoreCase);
+            }
+
+
+
         }
 
 
