@@ -10,6 +10,8 @@ namespace List_1
             // Top N Frequent Numbers>Given a List<int> of numbers, find the top N most frequent numbers
 
             {
+                //1. Top N Frequent Numbers
+
                 List<int> numbers = new List<int> { 50, 10, 50, 12, 10, 30, 50, 20, 12 };
                 int N = 2;
 
@@ -40,7 +42,7 @@ namespace List_1
 
             }
 
-            //1. 
+            //1. 1. Top N Frequent Numbers funcation
 
             static List<int> GetTopNFrequentNumbers(List<int> numbers, int n)
             {
@@ -52,7 +54,7 @@ namespace List_1
                     .ToList();
             }
 
-            //2.  //  Palindrome
+            //2.  //  Palindrome funcation
 
             static List<string> FilterPalindromes(List<string> input)
             {
